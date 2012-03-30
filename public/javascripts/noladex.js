@@ -1,5 +1,6 @@
 var noladex = {
 	run : function () {
+		this.superSize();
 		this.bindCategoryChange();
 		this.setupFancyZoom();
 		this.setupAbout();
@@ -8,7 +9,17 @@ var noladex = {
 		this.bindClose('.close-link');
 		this.searchButton();
 	},
-
+	
+	superSize : function() {
+		$.supersized({
+			horizontal_center: true,
+			start_slide: 0,
+			slides : [ 
+				{image : 'images/umd-bg.jpg'},
+			],
+		});
+	},
+	
 	searchButton : function() {
 		$('#search-button').click(function() {
       var s = window.prompt('Search NOLADEX');
@@ -62,10 +73,10 @@ var noladex = {
 
 	bindHovers : function() {
 		$('.person').live('mouseenter', function() {
-    	$(this).find('.overlay').stop(true, false).fadeTo(200, 1);
-    }).live('mouseleave', function(){
-    	$(this).find('.overlay').stop(true, false).fadeTo(200, 0);
-    });
+			$(this).find('.overlay').stop(true, false).fadeTo(200, .8);
+		}).live('mouseleave', function(){
+			$(this).find('.overlay').stop(true, false).fadeTo(200, 0);
+		});
 	}
 }
 
