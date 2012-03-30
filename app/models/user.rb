@@ -11,8 +11,8 @@ class User < ActiveRecord::Base
     :storage => Rails.env.production? ? :s3 : :filesystem,
     :bucket => 'noladex.org', 
     :s3_credentials => {
-      :access_key_id => ENV['S3_KEY'],
-      :secret_access_key => ENV['S3_SECRET']
+      :access_key_id => 'AKIAIAWWYJYVTOX6NYQQ',
+      :secret_access_key => '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'
     }
   }
 
