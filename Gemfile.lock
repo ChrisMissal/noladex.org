@@ -6,6 +6,17 @@ GIT
     authlogic (2.1.3)
       activesupport
 
+GIT
+  remote: git://github.com/thoughtbot/paperclip.git
+  revision: 7974bd2cf3a9249c8c64a652c748d3b85d65dbe2
+  specs:
+    paperclip (3.0.1)
+      activemodel (>= 3.0.0)
+      activerecord (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (>= 0.0.2)
+      mime-types
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -84,13 +95,8 @@ GEM
     mime-types (1.18)
     multi_json (1.2.0)
     multi_xml (0.4.2)
+    nokogiri (1.5.2)
     nokogiri (1.5.2-x86-mingw32)
-    paperclip (3.0.1)
-      activemodel (>= 3.0.0)
-      activerecord (>= 3.0.0)
-      activesupport (>= 3.0.0)
-      cocaine (>= 0.0.2)
-      mime-types
     paperclip-meta (0.4.1)
       paperclip
     polyglot (0.3.3)
@@ -154,7 +160,7 @@ DEPENDENCIES
   guard-test
   jquery-rails
   kaminari
-  paperclip
+  paperclip!
   paperclip-meta
   rack-openid
   rails (= 3.0.9)
