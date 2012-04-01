@@ -46,10 +46,7 @@ class User < ActiveRecord::Base
     :styles => { :medium => "250x250#" },
     :storage => Rails.env.production? ? :s3 : :filesystem,
     :bucket => 'weareumd', 
-    :s3_credentials => {
-      :access_key_id => AKIAIAWWYJYVTOX6NYQQ,
-      :secret_access_key => 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
-    }
+    :s3_credentials => "#{Rails.root}/config/amazon_s3.yml"
   }
 
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
