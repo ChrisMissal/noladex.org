@@ -47,8 +47,8 @@ class User < ActiveRecord::Base
     :storage => Rails.env.production? ? :s3 : :filesystem,
     :bucket => 'weareumd', 
     :s3_credentials => {
-      :access_key_id => 'AKIAIAWWYJYVTOX6NYQQ',
-      :secret_access_key => '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'
+      :access_key_id => AKIAIAWWYJYVTOX6NYQQ,
+      :secret_access_key => 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
     }
   }
 

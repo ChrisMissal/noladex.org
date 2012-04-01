@@ -8,7 +8,7 @@ gem 'rails', '3.0.9'
 gem 'sqlite3'
 gem 'paperclip'
 gem 'paperclip-meta'
-gem 'aws-s3', :require => 'aws/s3'
+gem 'aws-sdk', '~> 1.3.4'
 gem "jquery-rails"
 gem "kaminari"
 gem 'authlogic', :git => 'https://github.com/kreetitech/authlogic.git'
