@@ -1,5 +1,7 @@
 Noladex::Application.routes.draw do
 
+  get "user/new"
+
   resource :user_session
   
   resources :missions

@@ -20,6 +20,7 @@ gem 'will_paginate', '~> 3.0.pre4'
 # and rake tasks are available in development mode:
 group :development, :test do
   # gem 'ruby-debug19', :require => 'ruby-debug'
+  gem 'annotate', '2.4.0'
 end
 
 group :test do

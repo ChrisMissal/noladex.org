@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110724131800) do
+ActiveRecord::Schema.define(:version => 20120401182147) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -66,6 +66,7 @@ ActiveRecord::Schema.define(:version => 20110724131800) do
     t.string   "current_login_ip"
     t.string   "last_login_ip"
     t.text     "avatar_meta"
+    t.string   "major"
   end
 
 end

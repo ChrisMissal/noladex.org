@@ -1,9 +1,45 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id                  :integer         not null, primary key
+#  name                :string(255)
+#  email               :string(255)
+#  url_photo           :string(255)
+#  admin               :boolean
+#  created_at          :datetime
+#  updated_at          :datetime
+#  url1                :string(255)
+#  url2                :string(255)
+#  url3                :string(255)
+#  openid_url          :string(255)
+#  avatar_file_name    :string(255)
+#  avatar_content_type :string(255)
+#  avatar_file_size    :integer
+#  avatar_updated_at   :datetime
+#  crypted_password    :string(255)
+#  password_salt       :string(255)
+#  persistence_token   :string(255)
+#  single_access_token :string(255)
+#  perishable_token    :string(255)
+#  login_count         :integer
+#  failed_login_count  :integer
+#  last_request_at     :datetime
+#  current_login_at    :datetime
+#  last_login_at       :datetime
+#  current_login_ip    :string(255)
+#  last_login_ip       :string(255)
+#  avatar_meta         :text
+#  major               :string(255)
+#
+
 class User < ActiveRecord::Base
 
   acts_as_authentic do |c|
     c.login_field :email 
     c.require_password_confirmation = false
   end
+  
   
   has_many :missions
   has_attached_file :avatar, {
@@ -28,7 +64,8 @@ class User < ActiveRecord::Base
   validates :password,  :presence   => true,
               :confirmation   => true,
               :length     => { :within => 6..20 }
-
+  
+  
   validates :avatar_file_name, :presence => true
   validate :avatar_size
 

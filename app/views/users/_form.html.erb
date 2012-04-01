@@ -43,6 +43,10 @@
 	    </div> -->
 		<div class="social right">
 		  <div class="field">
+		    <%= f.label :major %>
+		    <%= f.text_field :major, :placeholder => "Engineer? Marketing? Comp Sci?" %>
+		  </div>  
+		  <div class="field">
 		    <%= f.label :url1, '@', :class => 'twitter' %>
 		    <%= f.text_field :url1, :placeholder => "twitter username" %>
 		  </div>  
@@ -56,10 +60,10 @@
 		  </div>
 	  </div>
 		<div class="missions left">
-				<h3>Your Missions</h3>
+				<h3>Your Skills</h3>
 	  <%= f.fields_for :missions do |m| %>
 	    <div class="field">
-	      I&nbsp;
+	      <span class="skill-i">I&nbsp;</span>
 	      <%= m.select :category_id, Category.all.map {|x| [x.name, x.id]} %>
 	      <%= m.text_field :statement, :placeholder => "what do you do? what’s your passion or talent?" %>
 	    </div>

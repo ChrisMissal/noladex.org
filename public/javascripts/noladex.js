@@ -15,7 +15,7 @@ var noladex = {
 			horizontal_center: true,
 			start_slide: 0,
 			slides : [ 
-				{image : 'images/umd-bg.jpg'},
+				{image : '/images/umd-bg.jpg'},
 			],
 		});
 	},
