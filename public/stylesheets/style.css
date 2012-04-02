@@ -604,16 +604,16 @@ fieldset ol {
 
 #sign-in .field .right{display: none;}
 
-@media only screen and (max-width: 913px) {#people{margin-top:100px;}}
-@media only screen and (max-width: 647px) {#people{margin-top:120px;}}
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 1020px) {#people{margin-top:100px;}}
+@media only screen and (max-width: 747px) {#people{margin-top:120px;}}
+@media only screen and (max-width: 557px) {
 	#topbar{padding: 5px;}
 	#topbar #logo a{margin-left:0;}
 	#topbar #filter{padding: 0;}
 	#topbar #navigation{float: left;}
 }
 
-@media only screen and (max-width: 365px) {
+@media only screen and (max-width: 395px) {
 	#people{margin-top:140px; padding: 35px 0;}
 }
 

@@ -60,11 +60,11 @@ class User < ActiveRecord::Base
     
   validates :password,  :presence   => true,
               :confirmation   => true,
-              :length     => { :within => 3..20 }
+              :length     => { :within => 6..20 }
   
   
   validates :avatar_file_name, :presence => true
-  
+  validate :avatar_size
 
   validates :missions, :length => { :minimum => Constants::MinimumMissions, :message => "You must have at least one mission to be listed."}
 
