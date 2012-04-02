@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   before_filter :require_user, :only => [:edit, :update, :destroy]
 
   def index
-    if params[:category] && !params.has_key?(:category)		
+    if params[:category] && params.has_key?(:category)		
       @users = User.find_by_category(params[:category]).paginate(:per_page => 30, :page => params[:page])
     else
       @users = User.includes(:missions => :category).order('created_at DESC').paginate(:per_page => 30, :page => params[:page])
