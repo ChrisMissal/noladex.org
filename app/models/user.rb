@@ -32,7 +32,6 @@
 #  avatar_meta         :text
 #  major               :string(255)
 #
-require 'RMagick'
 
 class User < ActiveRecord::Base
 

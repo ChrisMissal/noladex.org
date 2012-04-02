@@ -5,7 +5,6 @@ gem "rack-openid"
 
 gem 'rails', '3.0.9'
 
-gem "rmagick", "2.12.0", :require => 'RMagick'
 
 gem 'sqlite3'
 gem 'paperclip'
@@ -31,4 +30,8 @@ group :test do
   gem 'growl'
   gem 'rb-fsevent'
   gem 'shoulda'
+end
+
+group :production do
+  gem "rmagick", "2.12.0", :require => 'RMagick'
 end
