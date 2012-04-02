@@ -499,6 +499,7 @@ body {
 		width: 127px;
 		padding: 0 0 0 10px;
 		border: 0px solid transparent;
+		cursor: pointer;
 		
 	}
 	.centered .actions .add-button:hover { background: url(../images/add_button.png) no-repeat center center; }
