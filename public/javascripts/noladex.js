@@ -18,6 +18,8 @@ var noladex = {
 				{image : '/images/umd-bg.jpg'},
 			],
 		});
+		
+		$("#categories option:first").html("Choose a Category &darr;");
 	},
 	
 	searchButton : function() {
