@@ -60,7 +60,7 @@ class User < ActiveRecord::Base
     
   validates :password,  :presence   => true,
               :confirmation   => true,
-              :length     => { :within => 6..20 }
+              :length     => { :within => 3..20 }
   
   
   validates :avatar_file_name, :presence => true

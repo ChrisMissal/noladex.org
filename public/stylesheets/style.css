@@ -602,6 +602,8 @@ fieldset ol {
   list-style: none;
 }
 
+#sign-in .field .right{display: none;}
+
 @media only screen and (max-width: 913px) {#people{margin-top:100px;}}
 @media only screen and (max-width: 647px) {#people{margin-top:120px;}}
 @media only screen and (max-width: 480px) {
