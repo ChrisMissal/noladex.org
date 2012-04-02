@@ -7,7 +7,7 @@ gem 'rails', '3.0.9'
 
 
 gem 'sqlite3'
-gem 'paperclip'
+gem "paperclip", "~> 3.0"
 gem 'paperclip-meta'
 gem 'aws-sdk', '~> 1.3.4'
 gem "jquery-rails"

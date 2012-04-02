@@ -148,7 +148,7 @@ DEPENDENCIES
   guard-test
   jquery-rails
   kaminari
-  paperclip
+  paperclip (~> 3.0)
   paperclip-meta
   rack-openid
   rails (= 3.0.9)

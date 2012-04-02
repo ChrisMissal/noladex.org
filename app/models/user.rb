@@ -64,6 +64,7 @@ class User < ActiveRecord::Base
   
   
   validates :avatar_file_name, :presence => true
+  
 
   validates :missions, :length => { :minimum => Constants::MinimumMissions, :message => "You must have at least one mission to be listed."}
 
