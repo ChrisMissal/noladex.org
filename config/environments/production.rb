@@ -48,4 +48,9 @@ Noladex::Application.configure do
   config.active_support.deprecation = :notify
 
   config.mailer_host = "http://noladex.org"
+  
+  config.gem "rmagick",
+  :lib => "RMagick" 
+
+
 end
