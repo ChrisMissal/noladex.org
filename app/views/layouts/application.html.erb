@@ -48,7 +48,7 @@
 					<a href="/" title="home">We are UMD</a>
 				</h1>
 				<div id="filter">
-					<strong>I need a Terp who can<%= raw "&#133;"%></strong><%= select_tag "categories", options_from_collection_for_select(Category.all, "id", "name", params[:category]) %>
+					<strong>I need a Terp who can: </strong><%= select_tag "categories", options_from_collection_for_select(Category.all, "id", "name", params[:category]) %>
 				</div>	
 			
 			</div>
