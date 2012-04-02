@@ -40,6 +40,14 @@
 </head>
 
 <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=198525723587964";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 	<section id="topbar" class="clear">
 		<div class="left-side">
 			<div>
@@ -53,7 +61,7 @@
 			
 			</div>
 			<div id="social">
-				<span class='st_fblike_hcount' expr:st_url='http://www.weareumd.com' displayText='Facebook Like'></span>
+				<div class="fb-like" data-href="http://www.weareumd.com" data-send="false" data-width="100" data-show-faces="false"></div>
 				<span class='st_facebook_hcount' displayText='Facebook'></span>
 				<span class='st_twitter_hcount' displayText='Tweet'></span>
 			</div>
