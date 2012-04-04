@@ -7,6 +7,6 @@
 #   Mayor.create(:name => 'Daley', :city => cities.first)
 
 categories = []
-  ["Design", "Develop", "Write", "Illustrate", "Photograph", "Videograph", "Market"].each do | name |
+  ["Design", "Develop", "Edit", "Write", "Illustrate", "Photograph", "Videograph", "Market"].each do | name |
 	categories << Category.create(:name => name)
 end
