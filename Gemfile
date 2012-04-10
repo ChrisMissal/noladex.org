@@ -5,22 +5,23 @@ gem "rack-openid"
 
 gem 'rails', '3.0.9'
 
+
 gem 'sqlite3'
-gem 'paperclip'
+gem "paperclip", "~> 2.7"
 gem 'paperclip-meta'
-gem 'aws-s3', :require => 'aws/s3'
+gem 'aws-sdk', '~> 1.3.4'
 gem "jquery-rails"
 gem "kaminari"
 gem 'authlogic', :git => 'https://github.com/kreetitech/authlogic.git'
 gem 'formtastic'
 gem 'will_paginate', '~> 3.0.pre4'
+gem 'omniauth-twitter'
 
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
 group :development, :test do
   # gem 'ruby-debug19', :require => 'ruby-debug'
-  gem 'annotate', '2.4.0'
 end
 
 group :test do
@@ -30,4 +31,8 @@ group :test do
   gem 'growl'
   gem 'rb-fsevent'
   gem 'shoulda'
+end
+
+group :production do
+  gem "rmagick", "2.12.0", :require => 'RMagick'
 end
