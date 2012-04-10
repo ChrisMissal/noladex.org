@@ -3,11 +3,11 @@
 
 	<div class="overlay">
 		<h2><%= user.name %></h2>
-
-		<% user.missions.each do |mission| %>
-			<% if !user.major.blank? %>
+		<% if !user.major.blank? %>
 				<p class="tag">I am majoring in <%= user.major %> </p>
-			<% end %>
+		<% end %>
+	
+		<% user.missions.each do |mission| %>
 			<p class="tag">I <%= mission.category.name.downcase %> <%= mission.statement %></p>
 		<% end %>
 
