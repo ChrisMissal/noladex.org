@@ -1,2 +1,4 @@
 <%= render(:partial => "user", :collection => @users.shuffle) %>
 <%= will_paginate(@users) %>
+
+<%= pageless(@users.total_pages, users_path, params[:category]) %>
