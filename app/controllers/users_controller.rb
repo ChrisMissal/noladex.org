@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
 
+  before_filter :require_user, :only => [:edit, :update, :destroy]
 
   def index
     if params[:category] && params.has_key?(:category) && (params[:category].length > 0 )	
@@ -68,8 +69,8 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
   def destroy
-   if @user = User.find(params[:id])
-    @user.destroy
-   end
+ if @user = User.find(params[:id])
+  @user.destroy
  end
+end
 end
