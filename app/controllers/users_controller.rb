@@ -6,7 +6,7 @@ class UsersController < ApplicationController
     if params[:category] && params.has_key?(:category) && (params[:category].length > 0 )	
       @users = User.find_by_category(params[:category]).paginate(:per_page => 100, :page => params[:page])
     else
-      @users = User.includes(:missions => :category).order('created_at DESC').paginate(:per_page => 30, :page => params[:page])
+      @users = User.includes(:missions => :category).order('created_at DESC').paginate(:per_page => 100, :page => params[:page])
     end
 
     if request.xhr?
