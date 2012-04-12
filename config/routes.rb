@@ -20,4 +20,6 @@ Noladex::Application.routes.draw do
   match 'login', :controller => 'user_sessions', :action => 'new', :as => 'login'
 
   root :to => "users#index"
+  
+  match 'user/show', :to => "users#show"
 end
