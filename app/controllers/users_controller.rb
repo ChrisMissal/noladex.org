@@ -8,17 +8,12 @@ class UsersController < ApplicationController
     else
       @users = User.includes(:missions => :category).order('created_at DESC').paginate(:per_page => 100, :page => params[:page])
     end
-
-    if request.xhr?
-      render :partial => @users
-    else
       respond_to do |format|
         format.html
         format.js
-        format.json
+        format.json { render :json => @users }
         format.xml  { render :xml => @users }
       end   
-    end
   end
 
   def new
