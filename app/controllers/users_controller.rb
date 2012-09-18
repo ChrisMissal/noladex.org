@@ -65,4 +65,13 @@ class UsersController < ApplicationController
       end
     end
   end
+  
+  def show
+    @user = User.find(params[:id])
+  end
+  def destroy
+ if @user = User.find(params[:id])
+  @user.destroy
+ end
+end
 end
