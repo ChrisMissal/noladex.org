@@ -20,7 +20,7 @@
     "avatar_url" : "<%=u.avatar(:medium)%>"
 
   }
-  <%unless c == @users.size %>
+  <%unless c == @users.size - 1 %>
     ,
   <%end%>
 <%end%>
