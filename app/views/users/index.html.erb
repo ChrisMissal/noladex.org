@@ -1,27 +1,4 @@
-[
-<% @users.each do |u| %>
-  {
-    "name": "<%= u.name %>",
-    "major": "<%= u.major %>",
-    "missions" : [
-      <% u.missions.each_with_index do |m, i| %>
-        { "id": "mission_<%=i%>",
-          "name" : "<%=m.category.name.downcase%>",
-          "statement" : "<%= m.statement %>"
-        }
-        <% unless m == u.missions.last %>
-          , 
-        <% end %>
-      <%end%>
-    ],
-    "url1" : "<%=u.url1%>",
-    "url2" : "<%=u.url2%>",
-    "url3" : "<%=u.url3%>",
-    "avatar_url" : "<%=u.avatar(:medium)%>"
+<%= render(:partial => "user.html", :collection => @users.shuffle) %>
+<%= will_paginate(@users) %>
 
-  }
-  <%unless u == @users.last %>
-    ,
-  <%end%>
-<%end%>
-]
+<%= pageless(@users.total_pages, users_path, params[:category]) %>
