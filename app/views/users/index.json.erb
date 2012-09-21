@@ -1,5 +1,5 @@
 [
-<% @users.shuffle.each do |u| %>
+<% @users.shuffle.each_with_index do |u, c| %>
   {
     "name": "<%= u.name %>",
     "major": "<%= u.major %>",
@@ -20,7 +20,7 @@
     "avatar_url" : "<%=u.avatar(:medium)%>"
 
   }
-  <%unless u == @users.last %>
+  <%unless c == @users.size %>
     ,
   <%end%>
 <%end%>
