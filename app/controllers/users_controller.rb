@@ -1,14 +1,6 @@
 class UsersController < ApplicationController
 
   before_filter :require_user, :only => [:edit, :update, :destroy]
-  before_filter :set_access_control_headers
-
-  def  set_access_control_headers
-          headers['Access-Control-Allow-Origin'] = ‘*’
-          headers['Access-Control-Request-Method'] = ‘*’
-          headers['Access-Control-Allow-Headers'] = ‘*’
-          headers['Access-Control-Allow-Credentials'] = “true”
-  end
 
   def index
     if params[:category] && params.has_key?(:category) && (params[:category].length > 0 )	
@@ -19,7 +11,7 @@ class UsersController < ApplicationController
       respond_to do |format|
         format.html
         format.js
-        format.json {:callback => params[:callback]}
+        format.json
         format.xml  { render :xml => @users }
       end   
   end
