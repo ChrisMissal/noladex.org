@@ -12,7 +12,7 @@ class UsersController < ApplicationController
         format.html
         format.js
         format.json { render :template => 'users/show', :callback => params[:callback] }
-        format.xml  { render :xml => @users }
+        format.xml  { render :xml => @users, :callback => params[:callback] }
       end   
   end
 
