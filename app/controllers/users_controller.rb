@@ -11,7 +11,7 @@ class UsersController < ApplicationController
       respond_to do |format|
         format.html
         format.js
-        format.json { render :json => @users, :callback => params[:callback] }
+        format.json { render :template => 'users/show', :callback => params[:callback] }
         format.xml  { render :xml => @users, :callback => params[:callback] }
       end   
   end

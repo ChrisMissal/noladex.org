@@ -1,6 +1,6 @@
 [
 <% @users.shuffle.each_with_index do |u, c| %>
-  {
+  { "user":{
     "name": "<%= u.name %>",
     "major": "<%= u.major %>",
     "missions" : [
@@ -18,7 +18,7 @@
     "url2" : "<%=u.url2%>",
     "url3" : "<%=u.url3%>",
     "avatar_url" : "<%=u.avatar(:medium)%>"
-
+  }
   }
   <%unless c == @users.size - 1 %>
     ,
